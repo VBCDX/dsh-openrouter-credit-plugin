@@ -1,0 +1,10 @@
+# Insert the OpenRouter credit widget plugin into the Web composition.
+# Install with: dsh plugin --profile <name> add <this repo's git URL>
+#
+# The row loads lib/index.js (host half): it serves GET
+# /plugins/openrouter-credit with the current OpenRouter usage. The browser
+# half (lib/client.js, found through the dsh.client field in package.json)
+# renders the usage in the conversation header utilities slot.
+- insert:
+    - id: openrouter-credit
+      name: "@vbcdx/dsh-openrouter-credit-plugin"
